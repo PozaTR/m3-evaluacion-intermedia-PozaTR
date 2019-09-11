@@ -1,11 +1,12 @@
 import React from 'react';
 import Pokemon from './Pokemon';
+import PropTypes from 'prop-types';
 
 class PokemonsList extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ul className="pokemons__list">
+        <ol className="pokemons__list">
           {this.props.Pokemons.map((pokemon, index) => {
             console.log(pokemon);
             return(
@@ -18,11 +19,14 @@ class PokemonsList extends React.Component {
             </li>
             )
           })}
-        </ul>
+        </ol>
       </React.Fragment>
-
     );
   }
+}
+
+PokemonsList.propTypes = {
+  Pokemons: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default PokemonsList;
