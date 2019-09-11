@@ -13,6 +13,7 @@ class PokemonsList extends React.Component {
               <Pokemon 
                 name={pokemon.name}
                 img={pokemon.url}
+                types={pokemon.types}
               />
             </li>
             )

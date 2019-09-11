@@ -5,10 +5,15 @@ class Pokemon extends React.Component {
     return (
         <React.Fragment>
           <div>
-            <div className="pokemon__image-container"></div>
+            <img className="pokemon__img" src={this.props.img} alt={this.props.name}></img>
             <p className="pokemon__name">{this.props.name}</p>
-            <p className="pokemon__types"></p>
-            <p className="pokemon__evolution"></p>
+            <ul className="pokemon__types">
+              {this.props.types.map((type, index) => {
+                return(
+                  <li className="pokemon__types__element" key={index}>{type}</li>
+                )
+              })}
+            </ul>
           </div>
         </React.Fragment>
         );
