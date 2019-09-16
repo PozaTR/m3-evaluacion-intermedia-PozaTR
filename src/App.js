@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Pokemons from './components/Pokemons';
-import PokemonsList from './components/PokemonsList';
+import PokeList from './components/PokeList';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,16 +12,14 @@ class App extends React.Component {
     }
   }
 
-
   render() {
     return (
       <React.Fragment>
         <h1 className="pokemons__main-title">Mi lista de Pokemons</h1>
-        <PokemonsList Pokemons={this.state.Pokemons}/>
+        <PokeList Pokemons={this.state.Pokemons}/>
       </React.Fragment>
       );
   }
- 
 }
 
 export default App;

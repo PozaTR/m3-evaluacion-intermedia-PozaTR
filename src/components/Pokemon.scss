@@ -1,0 +1,27 @@
+.pokemon__card {
+  align-items:center;
+  border: 2px solid  #E3350D;
+  background-color: rgb(49, 49, 49);
+  border-radius: 8px;
+  color: #fff;
+  display:flex;
+  flex-direction: column;
+  font-size: 18px;
+  height: 225px;
+  justify-content:center;
+  text-align: center;
+  width:150px;
+}
+  
+.pokemon__name {
+  text-transform: capitalize;
+}
+
+.pokemon__types {
+  display:flex;
+  list-style: none;
+}
+
+.pokemon__types__element {
+  padding: 4px;
+}
