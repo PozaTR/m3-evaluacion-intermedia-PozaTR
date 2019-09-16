@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pokemon.scss'
+import './Pokemon.scss';
 import PropTypes from 'prop-types';
 
 
