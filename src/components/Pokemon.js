@@ -29,7 +29,8 @@ Pokemon.propTypes = {
   name: PropTypes.string.isRequired,
   types: PropTypes.arrayOf(PropTypes.string).isRequired,
   pokemonId: PropTypes.number.isRequired,
-  togglePokemonFav: PropTypes.func.isRequired
+  togglePokemonFav: PropTypes.func.isRequired,
+  isFav: PropTypes.bool.isRequired
 }
 
 export default Pokemon;

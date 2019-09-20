@@ -5,12 +5,11 @@ import PropTypes from 'prop-types';
 
 class PokemonsList extends React.Component {
   render() {
-    const { Pokemons, togglePokemonFav, favs} = this.props
-    console.log(favs)
+    const { pokemons, togglePokemonFav } = this.props;
     return (
         <div className="pokemons__container">
           <ol className="pokemons__list">
-            {Pokemons.map(pokemon => 
+            {pokemons.map(pokemon => 
                 <li className="pokemons__list__element" key={pokemon.id}>
                   <Pokemon
                     name={pokemon.name}
@@ -18,7 +17,7 @@ class PokemonsList extends React.Component {
                     types={pokemon.types}
                     pokemonId={pokemon.id}
                     togglePokemonFav={togglePokemonFav}
-                    isFav={favs.findIndex(favId => parseInt(favId) === pokemon.id) >= 0}
+                    isFav={pokemon.isFav}
                   />
                 </li>
             )}
@@ -29,9 +28,8 @@ class PokemonsList extends React.Component {
 }
 
 PokemonsList.propTypes = {
-  Pokemons: PropTypes.arrayOf(PropTypes.object).isRequired,
+  pokemons: PropTypes.arrayOf(PropTypes.object).isRequired,
   togglePokemonFav: PropTypes.func.isRequired,
-  favs: PropTypes.arrayOf(PropTypes.number).isRequired
 }
 
 export default PokemonsList;
