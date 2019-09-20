@@ -10,12 +10,12 @@ class App extends React.Component {
 
     this.state = {
       Pokemons: Pokemons, 
-      favs: []
+      favs: [],
     }
-    this.pokemonFav=this.pokemonFav.bind(this);
+    this.togglePokemonFav=this.togglePokemonFav.bind(this);
   }
 
-  pokemonFav(event) {
+  togglePokemonFav(event) {
     const pokemonId = event.currentTarget.dataset.id;
     this.setState((prevState) => {
       const indexFav = prevState.favs.findIndex(favId => favId === pokemonId);
@@ -24,17 +24,21 @@ class App extends React.Component {
       }else {
         prevState.favs.push(pokemonId)
       }
+      return {
+        favs: prevState.favs
+      }
     })
   }
 
   render() {
+    const { Pokemons, favs } = this.state;
     return (
       <React.Fragment>
         <header>
           <h1 className="pokemons__main-title">Mi lista de Pokemons</h1>
         </header>
         <main>
-          <PokeList Pokemons={this.state.Pokemons} pokemonFav={this.pokemonFav}/>
+          <PokeList Pokemons={Pokemons} togglePokemonFav={this.togglePokemonFav} favs={favs}/>
         </main>
       </React.Fragment>
     );
