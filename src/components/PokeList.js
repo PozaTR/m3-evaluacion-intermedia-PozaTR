@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 class PokemonsList extends React.Component {
   render() {
-    const { pokemonFav, Pokemons } = this.props
+    const { Pokemons, pokemonFav } = this.props
     return (
         <div className="pokemons__container">
           <ol className="pokemons__list">
@@ -15,6 +15,7 @@ class PokemonsList extends React.Component {
                     name={pokemon.name}
                     img={pokemon.url}
                     types={pokemon.types}
+                    pokemonId={pokemon.id}
                     pokemonFav={pokemonFav}
                   />
                 </li>
