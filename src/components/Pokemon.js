@@ -11,13 +11,13 @@ class Pokemon extends React.Component {
           <img className="pokemon__img" src={img} alt={name}></img>
           <div>
             <p className="pokemon__name">{name}</p>
-            <ol className="pokemon__types">
+            <ul className="pokemon__types">
               {types.map((type, index) => {
                 return (
                   <li className="pokemon__types__element" key={index}>{type}</li>
                 )
               })}
-            </ol>
+            </ul>
           </div>
         </div>
     );

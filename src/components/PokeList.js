@@ -8,17 +8,15 @@ class PokemonsList extends React.Component {
     return (
         <div className="pokemons__container">
           <ol className="pokemons__list">
-            {this.props.Pokemons.map((pokemon, index) => {
-              return (
-                <li className="pokemons__list__element" key={index}>
+            {this.props.Pokemons.map(pokemon => 
+                <li className="pokemons__list__element" key={pokemon.id}>
                   <Pokemon
                     name={pokemon.name}
                     img={pokemon.url}
                     types={pokemon.types}
                   />
                 </li>
-              )
-            })}
+            )}
           </ol>
         </div>
     );
