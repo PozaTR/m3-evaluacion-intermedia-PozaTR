@@ -5,15 +5,17 @@ import PropTypes from 'prop-types';
 
 class PokemonsList extends React.Component {
   render() {
+    const { pokemonFav, Pokemons } = this.props
     return (
         <div className="pokemons__container">
           <ol className="pokemons__list">
-            {this.props.Pokemons.map(pokemon => 
+            {Pokemons.map(pokemon => 
                 <li className="pokemons__list__element" key={pokemon.id}>
                   <Pokemon
                     name={pokemon.name}
                     img={pokemon.url}
                     types={pokemon.types}
+                    pokemonFav={pokemonFav}
                   />
                 </li>
             )}

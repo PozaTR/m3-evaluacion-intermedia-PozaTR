@@ -12,6 +12,11 @@
   text-align: center;
   width:150px;
 }
+
+.pokemon__card--favs {
+  background-color: rgb(149, 144, 144);
+  border: 2px solid  #30A7d7;
+}
   
 .pokemon__name {
   text-transform: capitalize;

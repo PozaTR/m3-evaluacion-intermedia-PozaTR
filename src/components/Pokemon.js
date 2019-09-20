@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 
 class Pokemon extends React.Component {
   render() {
-    const { img, name, types } = this.props
+    const { img, name, types, pokemonFav } = this.props
     return (
-        <div className="pokemon__card">
+        <div className="pokemon__card" onClick={pokemonFav}>
           <img className="pokemon__img" src={img} alt={name}></img>
           <div>
             <p className="pokemon__name">{name}</p>
